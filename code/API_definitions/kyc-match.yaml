@@ -247,6 +247,16 @@ components:
         idDocument:
           type: string
           description: Id number associated to the official identity document in the country. It may contain alphanumeric characters.
+        
+        idDocumentType:
+          type: string
+          enum: [ID_CARD, PASSPORT, DRIVER_LICENSE, RESIDENCE_PERMIT, OTHER]
+          description: Type of the official identity document provided.
+          
+        idDocumentExpiryDate:
+          type: string
+          format: date
+          description: Expiration date of the identity document (ISO 8601).
 
         name:
           type: string
